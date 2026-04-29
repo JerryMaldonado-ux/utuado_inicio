@@ -1,0 +1,464 @@
+/* VARIABLES */
+:root {
+    --fuenteHeading: 'Nunito', sans-serif;
+    --fuenteParrafo: 'Nunito', sans-serif;
+
+    --primario: #00165e;
+    --primario1: #395e70;
+    --primario2: #0099ff;
+    --primario3: #021657;
+
+    --blanco: #7CFF7C;
+    --negro: #000000;
+    --gris: #e1e1e1;
+}
+
+/* GLOBAL */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--primario1);
+    color: var(--blanco);
+    font-family: var(--fuenteParrafo);
+    font-size: 1.6rem;
+    line-height: 1.75;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* CONTENEDOR */
+.contenedor {
+    width: min(95%, 120rem);
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+/* TEXTOS */
+h1, h2, h3, h4 {
+    font-family: var(--fuenteHeading);
+    line-height: 1.2;
+}
+
+h1 { font-size: 6rem; }
+h2 { font-size: 4.5rem; }
+h3 { font-size: 3.5rem; }
+h4 { font-size: 3rem; }
+
+p {
+    font-family: var(--fuenteParrafo);
+}
+
+/* UTILIDADES */
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.centrar-text {
+    text-align: center;
+}
+
+/* HEADER */
+.header {
+    background-image: url("../img/letras.jpg");
+    height: 45rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header__text {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+/* BARRA Y NAVEGACION */
+.barra {
+    padding-top: 4rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.navegacion {
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+        display: flex;
+        gap: 2.5rem;
+        padding: 1rem;
+    }
+}
+
+.enlace_nav {
+    display: block;
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--blanco);
+    background: var(--primario2);
+    padding: 1rem;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .enlace_nav {
+        width: 15rem;
+        margin-bottom: 0;
+    }
+}
+
+.enlace_nav:hover {
+    background: var(--primario3);
+}
+
+/* LOGO */
+.logo {
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+.logo__nombre {
+    font-weight: 400;
+}
+
+.logo__bold {
+    font-weight: 800;
+}
+
+/* MAIN INDEX */
+.main__text {
+    padding: 4rem 0;
+}
+
+.main__text p {
+    padding-bottom: 1rem;
+}
+
+.main__text p,
+.main__text li {
+    font-size: 1.8rem;
+}
+
+.caguas {
+    font-weight: 900;
+    font-size: 1.75rem;
+}
+
+#map {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+#map img {
+    width: 80%;
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--primario3);
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.footer .contenedor {
+    padding-top: 0;
+}
+
+.footer .barra {
+    padding-top: 0;
+}
+
+/* REDES SOCIALES */
+.social-menu {
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.social-menu i {
+    color: #fff;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+@media (min-width: 768px) {
+    .social-menu {
+        gap: 2.5rem;
+    }
+
+    .social-menu i {
+        width: 7rem;
+        height: 7rem;
+        font-size: 4.5rem;
+    }
+}
+
+.social-menu a {
+    text-decoration: none;
+}
+
+.fa-facebook { background: #3b5998; }
+.fa-twitter { background: #00aced; }
+.fa-instagram { background: #3f729b; }
+.fa-youtube { background: #c4302b; }
+
+.social-menu i:hover {
+    opacity: 0.7;
+    border-radius: 0;
+}
+
+/* ATRACTIVOS */
+@media (min-width: 768px) {
+    .contenido-principal {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+}
+
+.contenido-principal__text {
+    padding-bottom: 3rem;
+    font-size: 100%;
+}
+
+.atractivo {
+    border-bottom: 2px solid var(--gris);
+    margin-bottom: 2rem;
+}
+
+.atractivo:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.boton {
+    display: block;
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border: none;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+    }
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+.boton--primario {
+    background-color: var(--negro);
+}
+
+.boton--secundario {
+    background-color: var(--primario2);
+}
+
+.rutas {
+    list-style: none;
+}
+
+.widget-ruta {
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+
+.widget-ruta:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+
+.widget-ruta__label {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+
+.widget-ruta__info {
+    font-weight: normal;
+}
+
+/* GASTRONOMIA */
+.gastronomia__imagen {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.gastronomia__imagen img {
+    width: 80%;
+}
+
+.restaurante {
+    padding: 3rem 0;
+    border-bottom: 2px solid var(--gris);
+}
+
+@media (min-width: 768px) {
+    .restaurante {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+
+.restaurante:last-of-type {
+    border: none;
+}
+
+.restaurante__informacion,
+.restaurante__info {
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+/* CONTACTO */
+.contacto-bg {
+    background-image: url("../img/utuado plaza.jpg");
+    height: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.formulario {
+    background-color: #ffffff;
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 4rem;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo__field {
+    flex: 1;
+    border: 1px solid var(--gris);
+    color: var(--negro);
+}
+
+.campo__field--textarea {
+    height: 20rem;
+}
+
+/* MOVIL */
+@media (max-width: 768px) {
+    .contenedor {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .header {
+        height: 55rem;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2.8rem;
+    }
+
+    h4 {
+        font-size: 2.4rem;
+    }
+}
+/* Imagenes del pueblo */
+.imagenes-pueblo {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.imagen-pueblo {
+    margin-bottom: 2rem;
+}
+
+.imagen-pueblo img {
+    width: 50%;
+    max-width: 40rem;
+}
+
+.descripcion-img {
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+}
+/* Multimedia */
+.reproductor {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.reproductor video {
+    max-width: 100%;
+}
+
+.reproductor audio {
+    width: 80%;
+}
+@media (max-width: 768px) {
+    .barra {
+        display: block;
+        text-align: center;
+    }
+
+    .navegacion {
+        display: block;
+    }
+
+    .enlace_nav {
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+}
